@@ -78,6 +78,16 @@ Personal_Area int references Personal_Area(id)
 );
 
 
+create table signed(
+id serial,
+name varchar,
+balance real);
+
+insert into signed(name,balance)
+values
+('igor',(select balance from Personal_Area
+where first_name = 'Елизавета' limit 1 ));
+
 
 
 
